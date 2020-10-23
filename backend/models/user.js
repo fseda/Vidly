@@ -39,7 +39,7 @@ const userSchema = new mongoose.Schema({
 // Export jwtPrivate key: export vidly_jwtPrivateKey=<KEY>
 userSchema.methods.generateAuthToken = function() {
   const token = jwt.sign({ 
-    _id: this._id, 
+    _id:     this._id, 
     isAdmin: this.isAdmin 
   } /** <- Payload */, config.get('jwtPrivateKey'));
   return token;

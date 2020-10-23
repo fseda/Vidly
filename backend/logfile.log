@@ -95,3 +95,7 @@
 {"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:51:37.758Z"}
 {"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:53:35.268Z"}
 {"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:53:35.307Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T02:17:38.225Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T02:17:38.249Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T15:37:37.779Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T15:37:37.815Z"}
