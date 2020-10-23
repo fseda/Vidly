@@ -1,10 +1,17 @@
+//#region Imports 
 const { Movie, validate } = require('../models/movie');
 const { Genre }           = require('../models/genre');
 
+const auth  = require('../middleware/auth');
+const admin = require('../middleware/admin');
+
+require('express-async-errors');
+
 const mongoose = require('mongoose');
 const express  = require('express');
-const router   = express.Router();
+//#endregion
 
+const router = express.Router();
 
 // Get ALL movies
 router.get('/', async (req, res) => {
@@ -29,7 +36,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // Post new movie to DB | NOT DONE
-router.post('/', async (req, res) => {
+router.post('/', [auth, admin], async (req, res) => {
   const { error } = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
@@ -52,7 +59,7 @@ router.post('/', async (req, res) => {
 });
 
 // Update existing movie
-router.put('/:id', async (req, res) => {
+router.put('/:id', [auth, admin], async (req, res) => {
   const { error } = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
@@ -79,7 +86,7 @@ router.put('/:id', async (req, res) => {
 });
 
 // Delete existing movie from DB
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', [auth, admin], async (req, res) => {
   const movie = await Movie.findByIdAndDelete(req.params.id)
     .catch(err => console.log('Could not perform operation...\n', err));
 
@@ -89,7 +96,6 @@ router.delete('/:id', async (req, res) => {
 
   res.send(movie);
 });
-
 
 // Export routes
 module.exports = router;

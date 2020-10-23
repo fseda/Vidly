@@ -1,15 +1,20 @@
+//#region Imports 
 const { Customer, validate } = require('../models/customer');
 
+const auth = require('../middleware/auth');
+
+require('express-async-errors');
+
+const _        = require('lodash');
 const mongoose = require('mongoose');
 const express  = require('express');
-const router   = express.Router();
+//#endregion
 
+const router = express.Router();
 
 // Get ALL customers
 router.get('/', async (req, res) => {
   const customers = await Customer.find().sort('-isGold name');
-
-  console.log(customers);
 
   res.send(customers);
 });
@@ -25,13 +30,13 @@ router.get('/:id', async (req, res) => {
 });
 
 // Post new customer to DB
-router.post('/', async (req, res) => {
+router.post('/', [auth], async (req, res) => {
   const { error } = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
   let isGold;
-  // Must contain exactly true or false (case insentive) else isGold is set to false
-  if (req.body.isGold == (/^true$/i || /^false$/i)) {
+  // Must contain exactly true (case insentive) else isGold is set to false
+  if (req.body.isGold === true) {
     isGold = req.body.isGold;
   } else {
     isGold = false;
@@ -44,13 +49,11 @@ router.post('/', async (req, res) => {
   });
   await customer.save();
 
-  console.log(customer);
-
   res.send(customer);
 });
 
 // Update existing customer
-router.put('/:id', async (req, res) => {
+router.put('/:id', [auth], async (req, res) => {
   const { error } = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
   
@@ -75,17 +78,14 @@ router.put('/:id', async (req, res) => {
 });
 
 // Delete existing customer
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', [auth], async (req, res) => {
   let customer = await Customer.findByIdAndDelete(req.params.id)
     .catch(err => console.log('Could not perform operation...\n', err));
 
   if (!customer) return res.status(404).send(`Cannot DELETE\nThe customer with ID '${req.params.id}' was not found. (404)`);
 
-  console.log(customer);
-
   res.send(customer);
 });
-
 
 // Export routes
 module.exports = router;

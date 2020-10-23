@@ -1,0 +1,97 @@
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-22T23:52:43.766Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-22T23:52:43.810Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-22T23:52:45.130Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-22T23:52:45.177Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-22T23:52:47.449Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-22T23:52:47.494Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-22T23:53:19.740Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-22T23:53:19.786Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-22T23:54:22.459Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-22T23:54:22.515Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-22T23:58:06.994Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-22T23:58:07.037Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:00:07.376Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:00:07.445Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:00:48.088Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:00:48.138Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:01:17.828Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:01:17.867Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:01:31.860Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:01:31.903Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:03:36.913Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:03:36.980Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:03:49.101Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:03:49.144Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:04:23.877Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:04:23.914Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:05:44.084Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:05:44.136Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:05:46.322Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:05:46.360Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:05:55.181Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:05:55.214Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:08:57.832Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:08:57.863Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:12:36.935Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:12:36.978Z"}
+{"message":"secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at Object.module.exports [as sign] (/home/fseda/projects/node-course/vidly/node_modules/jsonwebtoken/sign.js:107:20)\n    at model.userSchema.methods.generateAuthToken (/home/fseda/projects/node-course/vidly/models/user.js:40:21)\n    at /home/fseda/projects/node-course/vidly/routes/auth.js:26:22","level":"error","timestamp":"2020-10-23T00:13:08.145Z"}
+{"message":"secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at Object.module.exports [as sign] (/home/fseda/projects/node-course/vidly/node_modules/jsonwebtoken/sign.js:107:20)\n    at model.userSchema.methods.generateAuthToken (/home/fseda/projects/node-course/vidly/models/user.js:40:21)\n    at /home/fseda/projects/node-course/vidly/routes/auth.js:26:22","level":"error","timestamp":"2020-10-23T00:13:30.794Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:18:22.472Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:18:22.508Z"}
+{"message":"secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at Object.module.exports [as sign] (/home/fseda/projects/node-course/vidly/node_modules/jsonwebtoken/sign.js:107:20)\n    at model.userSchema.methods.generateAuthToken (/home/fseda/projects/node-course/vidly/models/user.js:40:21)\n    at /home/fseda/projects/node-course/vidly/routes/auth.js:26:22","level":"error","timestamp":"2020-10-23T00:19:38.017Z"}
+{"message":"secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at Object.module.exports [as sign] (/home/fseda/projects/node-course/vidly/node_modules/jsonwebtoken/sign.js:107:20)\n    at model.userSchema.methods.generateAuthToken (/home/fseda/projects/node-course/vidly/models/user.js:40:21)\n    at /home/fseda/projects/node-course/vidly/routes/auth.js:26:22","level":"error","timestamp":"2020-10-23T00:19:40.986Z"}
+{"message":"secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at Object.module.exports [as sign] (/home/fseda/projects/node-course/vidly/node_modules/jsonwebtoken/sign.js:107:20)\n    at model.userSchema.methods.generateAuthToken (/home/fseda/projects/node-course/vidly/models/user.js:40:21)\n    at /home/fseda/projects/node-course/vidly/routes/users.js:36:22","level":"error","timestamp":"2020-10-23T00:20:13.756Z"}
+{"message":"secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at Object.module.exports [as sign] (/home/fseda/projects/node-course/vidly/node_modules/jsonwebtoken/sign.js:107:20)\n    at model.userSchema.methods.generateAuthToken (/home/fseda/projects/node-course/vidly/models/user.js:40:21)\n    at /home/fseda/projects/node-course/vidly/routes/auth.js:26:22","level":"error","timestamp":"2020-10-23T00:20:56.393Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:24:03.357Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:24:03.398Z"}
+{"message":"secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at Object.module.exports [as sign] (/home/fseda/projects/node-course/vidly/node_modules/jsonwebtoken/sign.js:107:20)\n    at model.userSchema.methods.generateAuthToken (/home/fseda/projects/node-course/vidly/models/user.js:40:21)\n    at /home/fseda/projects/node-course/vidly/routes/auth.js:26:22","level":"error","timestamp":"2020-10-23T00:25:43.423Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:28:55.987Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:28:56.022Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:29:30.846Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:29:30.879Z"}
+{"message":"secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at Object.module.exports [as sign] (/home/fseda/projects/node-course/vidly/node_modules/jsonwebtoken/sign.js:101:20)\n    at model.userSchema.methods.generateAuthToken (/home/fseda/projects/node-course/vidly/models/user.js:40:21)\n    at /home/fseda/projects/node-course/vidly/routes/auth.js:26:22","level":"error","timestamp":"2020-10-23T00:29:35.275Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:30:04.467Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:30:04.511Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:33:15.700Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:33:15.735Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:36:57.492Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:36:57.529Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:38:08.283Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:38:08.329Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:38:09.834Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:38:09.877Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:38:12.358Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:38:12.394Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:38:15.189Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:38:15.239Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:38:33.572Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:38:33.622Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:38:37.026Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:38:37.073Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:38:50.022Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:38:50.071Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:41:29.276Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:41:29.308Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:41:52.637Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:41:52.682Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:42:22.692Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:42:22.729Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:42:25.888Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:42:25.950Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:42:30.563Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:42:30.602Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:42:36.523Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:42:36.566Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:43:04.747Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:43:04.782Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:49:40.151Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:49:54.207Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:49:54.251Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:50:03.645Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:50:03.679Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:51:01.638Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:51:01.674Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:51:37.715Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:51:37.758Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-23T00:53:35.268Z"}
+{"level":"info","message":"Connected to MongoDB... Vidly App","timestamp":"2020-10-23T00:53:35.307Z"}
