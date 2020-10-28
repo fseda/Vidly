@@ -1,11 +1,13 @@
 //#region 
 const { Rental }   = require('../models/rental');
-const { Customer } = require('../models/customer');
 const { Movie }    = require('../models/movie');
 
-const auth                  = require('../middleware/auth');
-const admin                 = require('../middleware/admin');
-const validateObjectId      = require('../middleware/validateObjectId');
+const validator = require('../models/return');
+
+const auth             = require('../middleware/auth');
+const admin            = require('../middleware/admin');
+const validateObjectId = require('../middleware/validateObjectId');
+const validate         = require('../middleware/validateReq');   
 
 require('express-async-errors');
 
@@ -15,11 +17,24 @@ const express  = require('express');
 
 const router = express.Router();
 
-router.post('/', [auth], async (req, res) => {
-  if (!req.body.customerId) return res.status(400).send('customerId not provided');
-  if (!req.body.movieId) return res.status(400).send('movieId not provided');
+router.post('/', [auth, validate(validator)], async (req, res) => {
+  const customerId = req.body.customerId;
+  const movieId    = req.body.movieId;
 
-  res.status(401).send('Unauthorized');
+  const rental = await Rental.lookup(customerId, movieId);
+
+  if (!rental) return res.status(404).send('Rental not found.');
+
+  if (rental.dateReturned) return res.status(400).send('Return already processed.');
+
+  rental.return();
+  await rental.save();
+
+  await Movie.update({ _id: movieId } , {
+    $inc: { numberInStock: 1 }
+  });
+
+  return res.send(rental);
 }); 
 
 module.exports = router;

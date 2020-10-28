@@ -71,4 +71,4 @@ function validateUser(user) {
 exports.complexityOptions = complexityOptions;
 exports.label             = label;
 exports.User              = User;
-exports.validate          = validateUser;
+exports.validateUser      = validateUser;

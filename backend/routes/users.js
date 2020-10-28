@@ -1,7 +1,8 @@
 //#region Imports 
-const { User, validate } = require('../models/user');
+const { User, validateUser } = require('../models/user');
 
-const auth = require('../middleware/auth');
+const auth     = require('../middleware/auth');
+const validate = require('../middleware/validateReq')
 
 require('express-async-errors');
 
@@ -20,10 +21,7 @@ router.get('/me', auth, async (req, res) => {
 });
 
 // Post new user to DB
-router.post('/', async (req, res) => {
-  const { error } = validate(req.body);
-  if (error) return res.status(400).send(error.details[0].message);
-
+router.post('/', [validate(validateUser)], async (req, res) => {
   let user = await User.findOne({ email: req.body.email });
   if (user) return res.status(400).send('User already exists.');
 
