@@ -1,7 +1,6 @@
 const request  = require('supertest');
 const mongoose = require('mongoose');
 
-const { Genre }    = require('../../models/genre');
 const { User }     = require('../../models/user');
 const { Movie }    = require('../../models/movie');
 const { Customer } = require('../../models/customer');
@@ -9,6 +8,7 @@ const { Rental }   = require('../../models/rental');
 
 jest.useFakeTimers();
 
+//#region Variables 
 let server;
 let token;
 let id;
@@ -17,6 +17,7 @@ let customerId;
 let movieId;
 let movie;
 let customer;
+//#endregion
 
 describe('/api/rentals', () => {
   beforeEach(() => { 
@@ -28,7 +29,7 @@ describe('/api/rentals', () => {
   });
 
   describe('GET /', () => {
-    const token = new User().generateAuthToken();
+    token = new User().generateAuthToken();
 
     it('Should return all the rentals', async () => {
       await Rental.collection.insertMany([
@@ -141,7 +142,6 @@ describe('/api/rentals', () => {
         isGold: true
       });
       await customer.save();
-
     });
     
     afterEach(async () => {
@@ -156,12 +156,20 @@ describe('/api/rentals', () => {
         .send({ customerId, movieId });
     }
 
-    it('Should return 401 if client is not logged in', async () => {
+    it('Should return 401 if user is not logged in', async () => {
       token = '';
 
       const res = await exec();
 
       expect(res.status).toEqual(401);
+    });
+
+    it('Should return 400 if token is invalid', async () => {
+      token = 'a';
+
+      const res = await exec();
+
+      expect(res.status).toEqual(400);
     });
 
     it('Should return 400 if customerId is not provided', async () => {
@@ -272,6 +280,14 @@ describe('/api/rentals', () => {
       const res = await exec();
 
       expect(res.status).toEqual(401);
+    });
+
+    it('Should return 400 if token is invalid', async () => {
+      token = 'a';
+
+      const res = await exec();
+
+      expect(res.status).toEqual(400);
     });
 
     it('Should return 404 if id is invalid', async () => {

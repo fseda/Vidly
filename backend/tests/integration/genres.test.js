@@ -70,7 +70,7 @@ describe('/api/genres', () => {
       name  = 'genre1';
     });
 
-    it('Should return a 401 error if client is not logged in', async () => {
+    it('Should return a 401 error if user is not logged in', async () => {
       token = '';
 
       const res = await exec();
@@ -78,6 +78,14 @@ describe('/api/genres', () => {
       expect(res.status).toEqual(401);
     });
   
+    it('Should return 400 if token is invalid', async () => {
+      token = 'a';
+
+      const res = await exec();
+
+      expect(res.status).toEqual(400);
+    });
+
     it('Should return a 400 if genre is less than 5 characters', async () => {
       name = '1234';
   
@@ -148,6 +156,14 @@ describe('/api/genres', () => {
       const res = await exec();
 
       expect(res.status).toEqual(401);
+    });
+
+    it('Should return 400 if token is invalid', async () => {
+      token = 'a';
+
+      const res = await exec();
+
+      expect(res.status).toEqual(400);
     });
 
     it('Should return a 404 error if id is invalid', async () => {
@@ -236,8 +252,16 @@ describe('/api/genres', () => {
       expect(res.status).toEqual(401);
     });
 
+    it('Should return 400 if token is invalid', async () => {
+      token = 'a';
+
+      const res = await exec();
+
+      expect(res.status).toEqual(400);
+    });
+
     it('Should return a 403 error if the user is not admin', async () => {
-      token = new User({ isAdmin: false}).generateAuthToken();
+      token = new User({ isAdmin: false }).generateAuthToken();
 
       const res = await exec();
 
@@ -260,7 +284,7 @@ describe('/api/genres', () => {
       expect(res.status).toEqual(404);
     });
 
-    it('Should delete the genre if input is valid', async () => {
+    it('Should delete the genre', async () => {
       await exec();
 
       const genreInDb = await Genre.findById(id);

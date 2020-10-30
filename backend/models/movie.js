@@ -19,13 +19,12 @@ const Movie = mongoose.model('Movie', new mongoose.Schema({
     type: Number,
     required: true,
     min: 0,
-    max: 255,
     get: v => Math.round(v),
     set: v => Math.round(v)
   },
   isAvailable: {
     type: Boolean,
-    default: function() { return this.numberInStock != 0 }
+    default: function() { return this.numberInStock !== 0 }
   },
   dailyRentalRate: {
     type: Number,
@@ -39,7 +38,7 @@ function validateMovie(movie) {
   const schema = Joi.object({
     title: Joi.string().min(3).max(255).required(),
     genreId: Joi.objectId().required(),
-    numberInStock: Joi.number().min(0).max(255).required(),
+    numberInStock: Joi.number().min(0).required(),
     dailyRentalRate: Joi.number().min(0).max(255).required()
   });
 
@@ -47,4 +46,4 @@ function validateMovie(movie) {
 }
 
 exports.Movie = Movie;
-exports.validate = validateMovie;
+exports.validator = validateMovie;

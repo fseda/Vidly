@@ -1,9 +1,10 @@
 //#region Imports 
-const { Genre, validate } = require('../models/genre');
+const { Genre, validator } = require('../models/genre');
 
 const auth             = require('../middleware/auth');
 const admin            = require('../middleware/admin');
 const validateObjectId = require('../middleware/validateObjectId');
+const validate         = require('../middleware/validateReq');
 
 require('express-async-errors');
 
@@ -26,10 +27,7 @@ router.get('/:id', [validateObjectId], async (req, res) => {
   res.send(genre);
  });
 
-router.post('/', [auth], async (req, res) => {
-  const { error } = validate(req.body);
-  if (error) return res.status(400).send(error.details[0].message);
-
+router.post('/', [auth, validate(validator)], async (req, res) => {
   let genre = await Genre.findOne({ name: req.body.name });
   if (genre) return res.status(403).send('Genre already exists.');
 
@@ -39,10 +37,7 @@ router.post('/', [auth], async (req, res) => {
   res.send(genre);
 });
 
-router.put('/:id', [auth, validateObjectId], async (req, res) => {
-  const { error } = validate(req.body);
-  if (error) return res.status(400).send(error.details[0].message);
-
+router.put('/:id', [auth, validateObjectId, validate(validator)], async (req, res) => {
   let genre = await Genre.findOne({ name: req.body.name });
   if (genre) return res.status(403).send('Genre already exists.');
 
