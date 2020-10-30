@@ -20839,3 +20839,5 @@
 {"level":"info","message":"Connected to mongodb://localhost/vidly_tests... Vidly App","timestamp":"2020-10-30T17:17:23.495Z"}
 {"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-30T17:17:24.069Z"}
 {"level":"info","message":"Connected to mongodb://localhost/vidly_tests... Vidly App","timestamp":"2020-10-30T17:17:24.091Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-10-30T17:49:43.984Z"}
+{"level":"info","message":"Connected to mongodb://localhost/vidly... Vidly App","timestamp":"2020-10-30T17:49:44.018Z"}

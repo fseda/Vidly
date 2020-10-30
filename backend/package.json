@@ -4,17 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll --verbose --testEnvironment=node --coverage --maxWorkers=1"
+    "test": "jest --watchAll --verbose --testEnvironment=node --coverage --maxWorkers=1",
+    "start": "node index.js"
   },
+  "engines": {
+    "node": "12.18.4"
+  }
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",
+    "compression": "^1.7.4",
     "config": "^3.3.2",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
     "fawn": "^2.1.5",
+    "helmet": "^4.1.1",
     "joi": "^17.2.1",
     "joi-objectid": "^3.0.1",
     "joi-password-complexity": "^4.2.1",
